@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Handshake: risposta del server (in chiaro)",
+  "type": "object",
+  "required": ["session_id", "B"],
+  "properties": {
+    "session_id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+    "B": { "type": "string", "pattern": "^[1-9A-F][0-9A-F]{1,511}$" }
+  },
+  "additionalProperties": false
+}
