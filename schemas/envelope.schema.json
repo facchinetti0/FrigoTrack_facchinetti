@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Busta cifrata (tutti i messaggi dopo l'handshake)",
+  "description": "Solo session_id e' in chiaro. ciphertext = Base64(nonce da 12 byte + testo cifrato), tag = Base64(tag GCM da 16 byte)",
+  "type": "object",
+  "required": ["session_id", "ciphertext", "tag"],
+  "properties": {
+    "session_id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+    "ciphertext": { "type": "string", "pattern": "^[A-Za-z0-9+/]+={0,2}$" },
+    "tag": { "type": "string", "pattern": "^[A-Za-z0-9+/]{22}==$" }
+  },
+  "additionalProperties": false
+}
