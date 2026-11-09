@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conferma di chiusura (risposta di /api/close, dentro la busta)",
+  "type": "object",
+  "required": ["status"],
+  "properties": {
+    "status": { "type": "string", "enum": ["closed"] }
+  },
+  "additionalProperties": false
+}
