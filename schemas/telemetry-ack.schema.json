@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conferma della misura (risposta di /api/telemetry, dentro la busta)",
+  "type": "object",
+  "required": ["status", "sensor_id", "received_at", "alarm"],
+  "properties": {
+    "status": { "type": "string", "enum": ["ok"] },
+    "sensor_id": { "type": "string", "pattern": "^[A-Z]+-[A-Z]{2}-[0-9]{3}$" },
+    "received_at": { "type": "string", "format": "date-time" },
+    "alarm": { "type": "boolean" },
+    "alarm_message": { "type": "string" }
+  },
+  "additionalProperties": false
+}
