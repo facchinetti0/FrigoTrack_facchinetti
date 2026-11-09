@@ -1,0 +1,10 @@
+# Risultati della compilazione
+bin/
+obj/
+
+
+# Editor
+.vs/
+.vscode/
+*.user
+*.suo
